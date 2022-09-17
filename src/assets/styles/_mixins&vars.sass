@@ -1,0 +1,23 @@
+%title
+  font-size: 24px
+  line-height: 26px
+  font-weight: 500
+
+%descText
+  font-size: 18px
+  line-height: 21px
+
+%links
+  transition: .3s
+  font-size: 18px
+  line-height: 21px
+  font-weight: 500
+  &:hover
+    color: #8ffffb
+
+@mixin flex-type($flex: flex, $justify, $align, $wrap: none, $direction: none) 
+  display: $flex 
+  justify-content: $justify 
+  align-items: $align 
+  flex-wrap: $wrap  
+  flex-direction: $direction

@@ -1,0 +1,61 @@
+@import '../../assets/styles/mixins&vars'
+
+.mentors
+  margin-top: 120px
+  color: #fff
+  .mentors_title
+    max-width: 560px
+    width: 100%
+    margin: 0 auto
+    text-align: center
+    h2
+      @extend  %title
+    p
+      margin-top: 77px
+      @extend %descText
+
+.mentors_cards
+  margin-top: 90px
+  @include flex-type($justify: space-between, $align: center)
+  display: flex
+  justify-content: space-between
+  gap: 25px
+  align-items: center
+
+.mentors_card
+  cursor: pointer
+  margin: 20px
+  position: relative
+  max-width: 600px
+  width: 100%
+  height: 400px
+  .mentors_card_frame
+    position: absolute
+    width: 100%
+    height: 100%
+    img
+      border-radius: 20px
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .mentors_card_desc
+    transition: .4s
+    border-radius: 20px
+    position: absolute
+    z-index: 2
+    opacity: 0
+    width: 100%
+    height: 100%
+    background: #0000004c
+    padding: 170px 45px 45px 45px
+    p
+      margin-top: 60px
+  &:hover
+    .mentors_card_desc
+      opacity: 1
+
+@media only screen and (max-width: 950px)
+  .mentors_cards
+    flex-wrap: wrap
+  .mentors_card
+    max-width: 100%

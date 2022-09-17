@@ -1,0 +1,57 @@
+@import '../../assets/styles/mixins&vars'
+
+.prices
+  margin-top: 120px
+  width: 100%
+  color: #fff
+  
+.prices_title
+  max-width: 600px
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  h2
+    @extend %title
+  p
+    margin-top: 66px
+    @extend %descText
+
+
+.prices_content
+  margin-top: 98px
+  @include flex-type($justify: space-between, $align: center)
+  gap: 60px
+  div
+    max-width: 400px
+    width: 100%
+    height: 480px
+    background: #ffffff22
+    padding: 150px 45px 0 45px
+    border-radius: 20px
+    text-align: center
+    transition: .3s
+    h3
+      font-size: 20px
+      line-height: 21px
+      font-weight: 500
+      margin-bottom: 65px
+    span
+      font-size: 36px
+      line-height: 38px
+      font-weight: 700
+    p
+      font-size: 16px
+      line-height: 18px
+      margin-top: 30px
+    &:hover
+      background: #2ec3d630
+      transform: scale(1.1)
+
+@media only screen and (max-width: 950px)
+  .prices_content
+    flex-wrap: wrap
+    justify-content: center
+    div
+      max-width: 100%
+      height: 350px
+      padding: 45px
